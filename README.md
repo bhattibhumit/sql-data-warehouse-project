@@ -68,7 +68,7 @@ data-warehouse-project/
 │   ├── data_catalog.md
 │   ├── data_flow.png
 │   ├── data_integration.png
-│   ├── data_models.drawio      # Star schema
+│   ├── data_models.png         # Star schema
 │   └── naming-conventions.md
 │
 ├── scripts/                    # SQL scripts
