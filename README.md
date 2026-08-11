@@ -85,30 +85,31 @@ After building the Gold layer (Star Schema), I created a set of analytical SQL s
 ```text
 sql-data-warehouse-project/
 │
-├── analytics/                      # Analytics & Reporting
+├── analytics/                          # Analytics & Reporting
 │   ├── docs/
-│   │   └── Data_analytics.png      # Analytics overview diagram
+│   │   └── Data_analytics.png          # Analytics overview diagram
 │   └── scripts/
-│       ├── Advance_Analystics.sql  # Advanced analytical queries
-│       ├── Customer_Report.sql     # Customer Report View
-│       └── Product_Report.sql      # Product Report View
+│       ├── EDA.sql                     # Exploratory Data Analysis
+│       ├── Advance_Analystics.sql      # Advanced analytical queries
+│       ├── Customer_Report.sql         # Customer Report View
+│       └── Product_Report.sql          # Product Report View
 │
-├── datasets/                       # Raw datasets (ERP and CRM data)
+├── datasets/                           # Raw datasets (ERP and CRM data)
 │
-├── docs/                           # Project documentation and architecture
+├── docs/                               # Project documentation and architecture
 │   ├── data_architecture.jpg             
 │   ├── data_catalog.md
 │   ├── data_flow.png
 │   ├── data_integration.png
-│   ├── data_model.png              # Star schema
+│   ├── data_model.png                  # Star schema
 │   └── naming_conventions.md
 │
-├── scripts/                        # SQL scripts (ETL)
-│   ├── bronze/                     # Raw data loading
-│   ├── silver/                     # Cleaning & transformation
-│   ├── gold/                       # Analytical models (Star Schema)
+├── scripts/                            # SQL scripts (ETL)
+│   ├── bronze/                         # Raw data loading
+│   ├── silver/                         # Cleaning & transformation
+│   ├── gold/                           # Analytical models (Star Schema)
 │   └── init_database.sql
 │
-├── tests/                          # Data quality checks
+├── tests/                              # Data quality checks
 │
 └── README.md
