@@ -1,4 +1,4 @@
-# SQL Data Warehouse Project | Medallion Architecture
+# SQL Data Warehouse & Analytics Project
 
 ## 📌 Project Overview
 This is an end-to-end Data Warehouse project built using **SQL Server**.  
@@ -56,26 +56,59 @@ Build a modern Data Warehouse in SQL Server that consolidates sales data from CR
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## 📊 Analytics Project
+
+After building the Gold layer (Star Schema), I created a set of analytical SQL scripts to generate business insights.
+
+<img width="2141" height="916" alt="Data_analytics" src="https://github.com/user-attachments/assets/78bd11d1-39c5-43d5-a570-a0add060243f" />
+
+
+### What is included:
+
+| Script | Description |
+|--------|-------------|
+| **Advance Analystics.sql** | Change Over Time, Cumulative Analysis, Performance Analysis (YoY), Part-to-Whole, and Data Segmentation |
+| **Customer_Report.sql** | Creates `gold.report_customers` view with customer segments (VIP / Regular / New), age groups, recency, AOV, and monthly spend |
+| **Product_Report.sql** | Creates `gold.report_products` view with product performance segments (High / Mid / Low), recency, and revenue KPIs |
+
+### Analytics Techniques Used:
+- Change Over Time Analysis  
+- Cumulative Analysis (Running Total & Moving Average)  
+- Performance Analysis (Year-over-Year)  
+- Part-to-Whole Analysis  
+- Data Segmentation (Customer & Product)  
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## 📂 Repository Structure
 
 ```text
-data-warehouse-project/
+sql-data-warehouse-project/
 │
-├── datasets/                   # Raw datasets (ERP and CRM data)
+├── analytics/                      # Analytics & Reporting
+│   ├── docs/
+│   │   └── Data_analytics.png      # Analytics overview diagram
+│   └── scripts/
+│       ├── Advance_Analystics.sql  # Advanced analytical queries
+│       ├── Customer_Report.sql     # Customer Report View
+│       └── Product_Report.sql      # Product Report View
 │
-├── docs/                       # Project documentation and architecture
+├── datasets/                       # Raw datasets (ERP and CRM data)
+│
+├── docs/                           # Project documentation and architecture
 │   ├── data_architecture.jpg             
 │   ├── data_catalog.md
 │   ├── data_flow.png
 │   ├── data_integration.png
-│   ├── data_models.png         # Star schema
-│   └── naming-conventions.md
+│   ├── data_model.png              # Star schema
+│   └── naming_conventions.md
 │
-├── scripts/                    # SQL scripts
-│   ├── bronze/                 # Raw data loading
-│   ├── silver/                 # Cleaning & transformation
-│   └── gold/                   # Analytical models (Star Schema)
+├── scripts/                        # SQL scripts (ETL)
+│   ├── bronze/                     # Raw data loading
+│   ├── silver/                     # Cleaning & transformation
+│   ├── gold/                       # Analytical models (Star Schema)
+│   └── init_database.sql
 │
-├── tests/                      # Data quality checks
+├── tests/                          # Data quality checks
 │
 └── README.md
